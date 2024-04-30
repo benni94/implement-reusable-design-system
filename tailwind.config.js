@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: ["class", '[data-mode="dark"]'],
   theme: {
     colors: {
       transparent: "transparent",
@@ -69,6 +70,20 @@ module.exports = {
         800: "#05603A",
         900: "#054F31",
       },
+    },
+    fontSize: {
+      xs: ["12px", "18px"],
+      sm: ["14px", "20px"],
+      md: ["16px", "24px"],
+      lg: ["18px", "28px"],
+      xl: ["20px", "30px"],
+
+      h6: ["24px", "32px"],
+      h5: ["30px", "38px"],
+      h4: ["36px", "44px"],
+      h3: ["48px", "60px"],
+      h2: ["60px", "72px"],
+      h1: ["72px", "90px"],
     },
   },
   plugins: [],

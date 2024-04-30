@@ -20,3 +20,8 @@ extend: {},
 },
 plugins: [],
 };
+
+##### link to add a globalDecorator for the darkmode in tailwind
+
+    => https://www.58bits.com/blog/2023/05/18/theme-switching-storybook-dark-mode-and-tailwind
+    => https://storybook.js.org/recipes/tailwindcss

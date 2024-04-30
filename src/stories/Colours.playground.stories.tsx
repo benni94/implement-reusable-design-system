@@ -1,22 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { StoryLayoutDecorator } from '../../.storybook/decorators/StoryLayout.decorator';
 import { ColourBox } from '../@components/ColourBox';
 import { Figma, colours } from '../data';
 
-type ExtendedColourProps = React.ComponentProps<typeof ColourBox> & { darkMode: boolean }
-
-type Story = StoryObj<ExtendedColourProps>;
+type Story = StoryObj<typeof ColourBox>;
 
 const mockColourBoxes = colours.map((colour) => (
     <ColourBox key={colour.bgClass} colour={colour} />
 ))
 
-const meta: Meta<ExtendedColourProps> = {
-    args: {
-        darkMode: false,
-    },
-    argTypes: {},
+const meta: Meta<typeof ColourBox> = {
     component: ColourBox,
     decorators: [
         (_, { args }) =>
