@@ -8,8 +8,9 @@ interface IButtonItem<T> {
 
 export interface IButtonGroupProps<T> {
     activeOption: T;
+    children?: React.ReactNode | React.ReactNode[]; // Add this line
     options: IButtonItem<T>[];
-    setActiveOption: Dispatch<SetStateAction<T>>
+    setActiveOption: Dispatch<SetStateAction<T>>;
 }
 
 export const ButtonGroup = <T,>({ activeOption, options, setActiveOption }: IButtonGroupProps<T>) => {
