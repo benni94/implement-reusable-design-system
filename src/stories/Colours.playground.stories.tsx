@@ -12,18 +12,13 @@ const mockColourBoxes = colours.map((colour) => (
 const meta: Meta<typeof ColourBox> = {
     component: ColourBox,
     decorators: [
-        (_, { args }) =>
+        () =>
             StoryLayoutDecorator(
-                () => mockColourBoxes,
+                mockColourBoxes,
                 {
-                    ...args,
                     className: 'grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11'
                 })],
     parameters: {
-        controls: {
-            expanded: true,
-            sort: 'alpha'
-        },
         design: {
             type: "figma",
             url: Figma.Colours

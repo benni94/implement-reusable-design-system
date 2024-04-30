@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { StoryLayoutDecorator } from '../../../.storybook/decorators/StoryLayout.decorator';
-import { ExtendedStoryProps } from '../../../.storybook/types';
-import { ITypographyProps, Typography } from '../../@components';
+import { StoryLayoutDecorator } from '../../.storybook/decorators/StoryLayout.decorator';
+import { ExtendedStoryProps } from '../../.storybook/types';
+import { ITypographyProps, Typography } from '../@components';
+import { Figma } from '../data';
 
 type ExtendedTypographyProps = ExtendedStoryProps<typeof Typography, { storyVariant: "heading" | "text" }>;
 
@@ -38,12 +39,16 @@ const meta: Meta<ExtendedTypographyProps> = {
     decorators: [
         (_, { args }) =>
             StoryLayoutDecorator(
-                () => mockStorieVariants(args),
+                mockStorieVariants(args),
                 {
-                    ...args,
                     className: "space-y-2"
                 })],
-    parameters: { controls: { expanded: true, sort: 'alpha' } },
+    parameters: {
+        design: {
+            type: "figma",
+            url: Figma.Typography
+        }
+    },
     title: 'Typography',
 };
 
@@ -54,10 +59,16 @@ export const Headings: Story = {
         storyVariant: "heading"
     },
     argTypes: {
+        children: {
+            table: { disable: true }
+        },
+        customWeight: {
+            table: { disable: true }
+        },
         variant: {
             table: { disable: true }
         }
-    }
+    },
 };
 
 type TextVariantValueType = Extract<ITypographyProps["variant"], "xs" | "sm" | "md" | "lg" | "xl">
@@ -69,13 +80,27 @@ const TextVariantValues: Record<TextVariantValueType, TextVariantValueType> = {
     xl: "xl"
 }
 
+type TextCustomWeightValueType = Extract<ITypographyProps["customWeight"], ITypographyProps["customWeight"]>
+const CustomWeightValues: Record<keyof TextCustomWeightValueType, TextCustomWeightValueType> = {
+    bold: "bold",
+    medium: "medium",
+    regular: "regular",
+    semibold: "semibold"
+}
+
 export const Text: Story = {
     args: {
         children: "Text",
-        storyVariant: "text",
         customColour: "text-error-500 dark:text-warning-300",
+        customWeight: "regular",
+        storyVariant: "text",
     },
     argTypes: {
+        customWeight: {
+            control: "radio",
+            mapping: CustomWeightValues,
+            options: Object.keys(CustomWeightValues)
+        },
         variant: {
             control: "radio",
             mapping: TextVariantValues,
