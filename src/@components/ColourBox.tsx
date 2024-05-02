@@ -2,6 +2,9 @@ import { memo } from 'react';
 import { IColour } from '../@interfaces';
 
 export interface IColourBoxProps {
+    /**
+     * The colour with bg-class, code and hex.
+     */
     colour: IColour
 }
 

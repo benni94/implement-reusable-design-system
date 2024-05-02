@@ -1,3 +1,7 @@
+## Starter repo
+
+https://github.com/thijssmudde/tailwind-storybook-starter
+
 #### Cheat sheet for tailwind:
 
 https://nerdcave.com/tailwind-cheat-sheet
