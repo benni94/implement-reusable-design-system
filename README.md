@@ -25,3 +25,18 @@ plugins: [],
 
     => https://www.58bits.com/blog/2023/05/18/theme-switching-storybook-dark-mode-and-tailwind
     => https://storybook.js.org/recipes/tailwindcss
+
+#### tailwindcss-classnames
+
+See: https://github.com/muhammadsammy/tailwindcss-classnames?tab=readme-ov-file#readme
+
+#### Tailwind CSS IntelliSense
+
+This is a regex for the experimental classRegex in the setting JSON of the VSC addon to find
+for a const like 'const someClass = classNames("flex ")' the tailwind classnames in the string like for the html element "className";
+
+```
+"tailwindCSS.experimental.classRegex": [
+["classNames\\(([^)]_)\\)", "(?:'|\"|`)([^']_)(?:'|\"|`)", "className\\s*=\\s*['\"]([^'\"`]\*)['\"]"]
+],
+```

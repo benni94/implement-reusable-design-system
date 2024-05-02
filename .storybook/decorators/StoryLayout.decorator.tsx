@@ -10,11 +10,10 @@ interface IStoryProps {
     noPadding?: boolean;
 }
 
-
-export const StoryLayoutDecorator = (Story: ReactElement<unknown> | JSX.Element | JSX.Element[], { className, darkMode, noPadding }: IStoryProps): ReactElement<unknown> => {
+export const StoryLayoutDecorator = (Story: ReactElement<unknown> | JSX.Element | JSX.Element[], props?: IStoryProps | undefined): ReactElement<unknown> => {
     return (
-        <div className={classNames({ "dark bg-gray-900": darkMode }, "m-4")}>
-            <div className={classNames(className, { "p-4": !noPadding })}>
+        <div className={classNames({ "dark bg-gray-900": props?.darkMode }, "m-4")}>
+            <div className={classNames(props?.className, { "p-4": !props?.noPadding })}>
                 {Story}
             </div>
         </div>
