@@ -14,5 +14,5 @@ export const ColourBox: React.FC<IColourBoxProps> = memo(({ colour }) => {
                 <p className='font-normal text-gray-500 text-md'>{colour.hex}</p>
             </div>
         </div>
-    )
+    );
 });

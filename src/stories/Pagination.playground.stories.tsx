@@ -32,7 +32,7 @@ export default meta;
 export const Playground: Story = {
     render: (args) => {
         const [page, setPage] = useState(0);
-        return <Pagination {...args} page={page} isMobile={args.isMobile} setPage={setPage} />
+        return <Pagination {...args} page={page} isMobile={args.isMobile} setPage={setPage} />;
     }
 };
 

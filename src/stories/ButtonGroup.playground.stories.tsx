@@ -42,7 +42,7 @@ const mockButtonGroups = () => {
       </div>
     </>
   );
-}
+};
 
 const meta: Meta<IButtonGroupProps<string>> = {
   args: {},

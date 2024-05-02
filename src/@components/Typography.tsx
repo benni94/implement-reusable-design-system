@@ -35,14 +35,14 @@ const TypographyVariantClasses: Record<TypographyVariants, string> = {
     h4: "text-h4",
     h5: "text-h5",
     h6: "text-h6",
-}
+};
 
 const TypographyWeightClasses: Record<TypographyWeightOptions, TypographyWeightValue> = {
     bold: "font-bold",
     medium: "font-medium",
     regular: "font-normal",
     semibold: "font-semibold"
-}
+};
 
 /**
  * Typeguard to indicate, wheter the given element is a valid JSX element or not. 
@@ -76,5 +76,5 @@ export const Typography: React.FC<ITypographyProps> = ({ children, className, cu
         customColour
     )}>
         {children}
-    </Component>
+    </Component>;
 };

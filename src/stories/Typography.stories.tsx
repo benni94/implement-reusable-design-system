@@ -3,7 +3,6 @@ import { StoryLayoutDecorator } from '../../.storybook/decorators/StoryLayout.de
 import { ExtendedStoryProps } from '../../.storybook/types';
 import { ITypographyProps, Typography } from '../@components';
 import { Figma } from '../data';
-
 type ExtendedTypographyProps = ExtendedStoryProps<typeof Typography, { storyVariant: "heading" | "text" }>;
 
 
@@ -13,16 +12,16 @@ const headingCount: Extract<ITypographyProps["variant"], "h1" | "h2" | "h3" | "h
     "h1", "h2", "h3", "h4", "h5", "h6"
 ];
 
-const mockTypographyHeadings = (args: ITypographyProps) => headingCount.map((heading) => <Typography {...args} variant={heading} >Display {heading}</Typography>);
+const mockTypographyHeadings = (args: ITypographyProps) => headingCount.map((heading, i) => <Typography key={i} {...args} variant={heading} >Display {heading}</Typography>);
 
-const mockTypographyText = (args: ITypographyProps) => <Typography {...args}>{args.children}</Typography>
+const mockTypographyText = (args: ITypographyProps) => <Typography {...args}>{args.children}</Typography>;
 
 const mockStorieVariants = ({ storyVariant, ...args }: ExtendedTypographyProps) => {
     if (storyVariant === "heading") {
         return mockTypographyHeadings(args);
     }
     return mockTypographyText(args);
-}
+};
 
 const meta: Meta<ExtendedTypographyProps> = {
     args: {
@@ -78,7 +77,7 @@ const TextVariantValues: Record<TextVariantValueType, TextVariantValueType> = {
     md: "md",
     lg: "lg",
     xl: "xl"
-}
+};
 
 type TextCustomWeightValueType = Extract<ITypographyProps["customWeight"], ITypographyProps["customWeight"]>
 const CustomWeightValues: Record<keyof TextCustomWeightValueType, TextCustomWeightValueType> = {
@@ -86,7 +85,7 @@ const CustomWeightValues: Record<keyof TextCustomWeightValueType, TextCustomWeig
     medium: "medium",
     regular: "regular",
     semibold: "semibold"
-}
+};
 
 export const Text: Story = {
     args: {
@@ -107,4 +106,4 @@ export const Text: Story = {
             options: Object.keys(TextVariantValues)
         }
     }
-}
+};

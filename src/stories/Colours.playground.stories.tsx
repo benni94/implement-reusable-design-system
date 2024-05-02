@@ -7,7 +7,7 @@ type Story = StoryObj<typeof ColourBox>;
 
 const mockColourBoxes = colours.map((colour) => (
     <ColourBox key={colour.bgClass} colour={colour} />
-))
+));
 
 const meta: Meta<typeof ColourBox> = {
     component: ColourBox,

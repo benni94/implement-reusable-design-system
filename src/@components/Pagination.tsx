@@ -45,7 +45,7 @@ export const Pagination: React.FC<IPaginationProps> = memo(({ isMobile, page, to
 
     useEffect(() => {
         // if the value of total pages changes, and is bigger than the current page, set the current page to the total pages value
-        if (page >= totalPages) setPage(totalPages - 1)
+        if (page >= totalPages) setPage(totalPages - 1);
     }, [page, setPage, totalPages]);
 
     const handlePageChange = useCallback((page: number) => {
@@ -69,10 +69,10 @@ export const Pagination: React.FC<IPaginationProps> = memo(({ isMobile, page, to
                 className={classNames("mr-3 text-gray-500 dark:text-white", nextButtonEndStyle(totalPages, page))}
                 size={BUTTON_ICON_SIZE} onClick={() => {
                     if (page < totalPages - 1) {
-                        setPage(page + 1)
+                        setPage(page + 1);
                     }
                 }} />
-        </div>
+        </div>;
     }
 
     return (
@@ -108,5 +108,5 @@ export const Pagination: React.FC<IPaginationProps> = memo(({ isMobile, page, to
                 </PaginationHeadless.NextButton>
             </PaginationHeadless >
         </>
-    )
+    );
 });
