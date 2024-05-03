@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* only add static styles in here because otherwise, the treeshaking of tailwind will remove the styles which are not applied to the
+ * dom initially SEE: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom-css
+ */
 @layer components {
   /* Badge */
   .badge-base {
     @apply inline-flex items-center font-medium rounded-2xl;
   }
+}
 
-  .badge-gray {
+ .badge-gray {
     @apply text-gray-700 bg-gray-100;
   }
 
@@ -39,4 +43,3 @@
   .badge-lg {
     @apply h-6 px-2.5 text-sm;
   }
-}
