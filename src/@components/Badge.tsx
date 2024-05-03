@@ -4,7 +4,6 @@ import React, { ReactElement, memo } from 'react';
 type BadgeVariant = "gray" | "primary" | "error" | "warning" | "success";
 type BadgeSize = "sm" | "md" | "lg";
 
-const BADGE_PREFIX = "badge-";
 
 export interface IBadgeProps {
     /**
@@ -34,6 +33,8 @@ export interface IBadgeProps {
     variant: BadgeVariant;
 }
 
+const BADGE_PREFIX = "badge-";
+
 /**
  * This styles depends on the global defined "tailwind.css" file. 
  * When hovering over the applied styles in the css file, you can see the real css definitions for the css class names. 
@@ -52,11 +53,22 @@ const BadgeSizeClasses: Record<BadgeSize, string> = {
     lg: `${BADGE_PREFIX}lg`
 };
 
-const DynamicIconComponent = (className: string, Component?: ReactElement) => Component ? <Component.type {...Component.props} className={className} /> : null;
+/**
+ * Dynamic component to render a icon if the component exists. 
+ * Used the type of the component to create a JSX element with the component props.
+ * 
+ * @param className The class names to style the component.
+ * @param Component The component to render.
+ * @returns The component if exists.
+ */
+const DynamicBadgeIconComponent = (className: string, Component?: ReactElement) => Component ? <Component.type {...Component.props} className={className} /> : null;
 
 export const Badge: React.FC<IBadgeProps> = memo(({ children, TrailingIcon, variant, className, LeadingIcon, size = "md" }) => {
     const BadgeVariantClassName = BadgeVariantClasses[variant];
     const BadgeSizeClassName = BadgeSizeClasses[size];
+
+    console.log(BadgeVariantClassName,
+        BadgeSizeClassName,);
 
     return (
         <div
@@ -68,9 +80,9 @@ export const Badge: React.FC<IBadgeProps> = memo(({ children, TrailingIcon, vari
                     className
                 )}
         >
-            {DynamicIconComponent(classNames("mr-1.5", LeadingIcon?.props.className), LeadingIcon)}
+            {DynamicBadgeIconComponent(classNames("mr-1.5", LeadingIcon?.props.className), LeadingIcon)}
             {children}
-            {DynamicIconComponent(classNames("ml-1.5", TrailingIcon?.props.className), TrailingIcon)}
+            {DynamicBadgeIconComponent(classNames("ml-1.5", TrailingIcon?.props.className), TrailingIcon)}
         </div>
     );
 }); 

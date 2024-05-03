@@ -5,13 +5,19 @@
 /* only add static styles in here because otherwise, the treeshaking of tailwind will remove the styles which are not applied to the
  * dom initially SEE: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom-css
  */
-@layer components {
+@layer components { 
   /* Badge */
   .badge-base {
     @apply inline-flex items-center font-medium rounded-2xl;
   }
+
+  /* Button */
+  .btn-base {
+     @apply flex items-center font-medium rounded-lg select-none focus:outline-none whitespace-nowrap;
+  }
 }
 
+ /* Badge */
  .badge-gray {
     @apply text-gray-700 bg-gray-100;
   }
@@ -42,4 +48,122 @@
 
   .badge-lg {
     @apply h-6 px-2.5 text-sm;
+  }
+
+  /* Button */
+  .btn-sm {
+    @apply h-9 px-3.5 text-sm;
+  }
+
+  .btn-md {
+    @apply h-10 px-4 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-4 h-11 text-md;
+  }
+
+  .btn-xl {
+    @apply h-12 px-5 text-md;
+  }
+
+  .btn-2xl {
+    @apply text-lg h-14 px-7;
+  }
+
+  .btn-icon-sm {
+    @apply h-9 w-9;
+  }
+
+  .btn-icon-md {
+    @apply w-10 h-10;
+  }
+
+  .btn-icon-lg {
+    @apply h-11 w-11;
+  }
+
+  .btn-icon-xl {
+    @apply w-12 h-12;
+  }
+
+  .btn-icon-2xl {
+    @apply h-14 w-14;
+  }
+
+  /* Primary */
+  .btn-primary {
+    @apply text-white bg-primary-600 dark:bg-gray-800 dark:text-white;
+  }
+
+  .btn-primary-hover {
+    @apply hover:bg-primary-700 dark:hover:bg-gray-700;
+  }
+
+  .btn-primary-focus {
+    @apply focus:ring-4 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20;
+  }
+
+  .btn-primary-disabled {
+    @apply text-white bg-primary-200 dark:bg-gray-400;
+  }
+
+  /* Secondary */
+  .btn-secondary {
+    @apply border border-transparent shadow-sm dark:border-white bg-primary-50 dark:bg-opacity-20 text-primary-700 dark:text-white;
+  }
+
+  .btn-secondary-hover {
+    @apply hover:bg-primary-100 dark:hover:bg-white dark:hover:bg-opacity-40 dark:hover:border-opacity-40 dark:hover:text-white;
+  }
+
+  .btn-secondary-focus {
+    @apply focus:ring-4 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20;
+  }
+
+  .btn-secondary-disabled {
+    @apply shadow-sm bg-primary-25 dark:bg-white dark:bg-opacity-20 text-primary-300 dark:border-gray-300 dark:text-gray-300;
+  }
+
+  /* SecondaryGray */
+  .btn-secondaryGray {
+    @apply text-gray-700 bg-white border border-gray-300 shadow-sm dark:border-white dark:bg-gray-900 dark:text-white;
+  }
+
+  .btn-secondaryGray-hover {
+    @apply hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-800 dark:hover:text-gray-300 dark:border-gray-300;
+  }
+
+  .btn-secondaryGray-focus {
+    @apply focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20;
+  }
+
+  .btn-secondaryGray-disabled {
+    @apply text-gray-300 border border-gray-200 shadow-sm dark:bg-gray-600 dark:text-white;
+  }
+
+  /* Tertiary */
+  .btn-tertiary {
+    @apply bg-white dark:bg-gray-900 text-primary-700;
+  }
+
+  .btn-tertiary-hover {
+    @apply hover:bg-primary-50 dark:hover:bg-white dark:hover:bg-opacity-20;
+  }
+
+  .btn-tertiary-disabled {
+    @apply text-gray-300 bg-white dark:bg-gray-900;
+  }
+
+  /* TertiaryGray */
+  .btn-tertiaryGray {
+    @apply text-gray-900 bg-white dark:bg-gray-900 dark:text-gray-200;
+  }
+
+  .btn-tertiaryGray-hover {
+    @apply hover:bg-gray-50 dark:hover:bg-white dark:hover:bg-opacity-20 hover:text-gray-800 dark:hover:text-white;
+  }
+
+  .btn-tertiaryGray-disabled {
+    @apply text-gray-300 bg-white dark:bg-gray-900 dark:text-gray-400;
   }
