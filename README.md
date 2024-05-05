@@ -41,6 +41,6 @@ for a const like 'const someClass = classNames("flex ")' the tailwind classnames
 
 ```
 "tailwindCSS.experimental.classRegex": [
-["classNames\\(([^)]_)\\)", "(?:'|\"|`)([^']_)(?:'|\"|`)", "className\\s*=\\s*['\"]([^'\"`]\*)['\"]"]
-],
+    ["classNames\\(([^)]+)\\)", "(?:'|\"|`)([^'\"`]*)", "className\\s*=\\s*['\"]([^'\"`]*)['\"]"]
+  ],
 ```
