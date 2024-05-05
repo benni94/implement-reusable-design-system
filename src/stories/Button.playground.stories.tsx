@@ -19,7 +19,7 @@ const mockButton = (args: IButtonProps) => {
       </Button>
 
       <Button {...args} TrailingIcon={<FiArrowRight />}>
-        Button CTA{" "}
+        Button CTA
       </Button>
 
       <Button {...args} IconOnly={<FiArrowRight />} />
