@@ -66,5 +66,5 @@ export const Select: FC<ISelectProps> = memo(
         </Listbox>
       </div>
     );
-  }
+  },
 );

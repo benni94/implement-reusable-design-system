@@ -17,13 +17,13 @@ const listBoxOptions = classNames(
   "shadow-lg",
   "top-13",
   "dark:border-gray-500",
-  "dark:bg-gray-800"
+  "dark:bg-gray-800",
 );
 
 const listBoxOptionsList = (
   active: boolean,
   index: number,
-  options: IOption[]
+  options: IOption[],
 ) =>
   classNames(
     "flex items-center",
@@ -41,7 +41,7 @@ const listBoxOptionsList = (
       "bg-primary-25 dark:bg-gray-100 dark:bg-opacity-10": active,
       "rounded-t-lg": index === 0,
       "rounded-b-lg": index === options.length - 1,
-    }
+    },
   );
 
 const icon = (open: boolean, width?: string) =>
@@ -55,7 +55,7 @@ const icon = (open: boolean, width?: string) =>
       "-rotate-180": open,
       "ml-auto": width,
       "ml-3.5": !width,
-    }
+    },
   );
 
 const optionsLabel = classNames("flex items-center", "flex items-center");
@@ -86,7 +86,7 @@ const listBoxButton = (selectedOption?: IOption, width?: string) =>
       "text-gray-900 dark:text-white": selectedOption,
       "text-gray-500 dark:text-gray-300": !selectedOption,
     },
-    width
+    width,
   );
 
 const leadingIconWrapper = classNames("w-5 h-5 mr-2 overflow-hidden");

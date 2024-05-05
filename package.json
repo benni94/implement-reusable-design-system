@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "build": "react-scripts build",
