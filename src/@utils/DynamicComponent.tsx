@@ -2,8 +2,11 @@ import { ReactElement } from "react";
 
 interface DynamicComponentProps {
   Component?: ReactElement;
+  Fallback?: ReactElement;
   styles?: {
     className?: string;
+    fallbackClassName?: string;
+    fallbackSize?: string;
     size?: number;
   };
 }
@@ -14,11 +17,13 @@ interface DynamicComponentProps {
  *
  * @param className The class names to style the component.
  * @param Component The component to render.
+ * @param fallback The fallback component if the `Component` does not exists.
  * @param styles Optional styles applied to the component.
  * @returns The component if exists.
  */
 export const DynamicComponent = ({
   Component,
+  Fallback,
   styles,
 }: DynamicComponentProps) => {
   if (Component) {
@@ -27,6 +32,14 @@ export const DynamicComponent = ({
         {...Component.props}
         className={styles?.className}
         size={styles?.size}
+      />
+    );
+  } else if (Fallback) {
+    return (
+      <Fallback.type
+        {...Fallback.props}
+        className={styles?.fallbackClassName}
+        size={styles?.fallbackSize}
       />
     );
   }
