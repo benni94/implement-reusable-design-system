@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React, { FC, ReactNode, createElement } from "react";
+import { IHasClassName } from "../@interfaces";
 
 export type TypographyVariants =
   // Text
@@ -24,9 +25,8 @@ type TypographyWeightValue =
   | "font-semibold"
   | "font-bold";
 
-export interface ITypographyProps {
+export interface ITypographyProps extends IHasClassName {
   children: string | ReactNode;
-  className?: string;
   customColour?: string;
   customWeight?: TypographyWeightOptions;
   variant?: TypographyVariants;
@@ -65,7 +65,7 @@ const TypographyWeightClasses: Record<
  * @returns `true` if the element is a key of the JSX IntrinsicElements. False otherwise.
  */
 function isValidJSXElement(
-  element: string,
+  element: string
 ): element is keyof JSX.IntrinsicElements {
   return React.isValidElement(createElement(element));
 }
@@ -97,7 +97,7 @@ export const Typography: FC<ITypographyProps> = ({
           "tracking-tight": ["h1", "h2", "h3"].includes(variant),
           "text-gray-900 dark:text-white": !customColour,
         },
-        customColour,
+        customColour
       )}
     >
       {children}

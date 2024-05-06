@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { IHasClassName } from "../../@interfaces";
 
 export type ButtonVariant =
   | "primary"
@@ -11,15 +12,11 @@ export type ButtonSize = "sm" | "md" | "lg" | "xl" | "2xl";
 
 export type ButtonState = "default" | "hover" | "focus" | "disabled";
 
-export interface IButtonProps {
+export interface IButtonProps extends IHasClassName {
   /**
    * The children of the button.
    */
   children?: string | ReactElement;
-  /**
-   * The optional additional className.
-   */
-  className?: string;
   /**
    * Flag to determine if the button should be disabled with the disabled state.
    */

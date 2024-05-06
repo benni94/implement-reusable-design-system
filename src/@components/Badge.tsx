@@ -1,19 +1,16 @@
 import classNames from "classnames";
 import { FC, ReactElement, memo } from "react";
+import { IHasClassName } from "../@interfaces";
 import { DynamicComponent } from "../@utils";
 
 type BadgeVariant = "gray" | "primary" | "error" | "warning" | "success";
 type BadgeSize = "sm" | "md" | "lg";
 
-export interface IBadgeProps {
+export interface IBadgeProps extends IHasClassName {
   /**
    * The children of the component.
    */
   children: string | ReactElement;
-  /**
-   * The additional class name.
-   */
-  className?: string;
   /**
    * The preview icon at the start in the badge.
    */
@@ -71,7 +68,7 @@ export const Badge: FC<IBadgeProps> = memo(
           "badge-base",
           BadgeVariantClassName,
           BadgeSizeClassName,
-          className,
+          className
         )}
       >
         <DynamicComponent
@@ -89,5 +86,5 @@ export const Badge: FC<IBadgeProps> = memo(
         />
       </div>
     );
-  },
+  }
 );

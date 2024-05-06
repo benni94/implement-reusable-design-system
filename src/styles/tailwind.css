@@ -167,3 +167,8 @@
   .btn-tertiaryGray-disabled {
     @apply text-gray-300 bg-white dark:bg-gray-900 dark:text-gray-400;
   }
+
+   /* Navigation */
+   .navItem {
+    @apply flex items-center w-full h-10 py-2 transition-all duration-100 ease-out rounded-lg cursor-pointer select-none text-md whitespace-nowrap hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10;
+  }
