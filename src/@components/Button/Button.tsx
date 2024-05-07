@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, memo } from "react";
+import React, { FC, memo } from "react";
 import { DynamicComponent } from "../../@utils";
 import {
   ButtonIconSizeClasses,
@@ -35,7 +35,7 @@ export const Button: FC<IButtonProps> = memo(
           [classNames(
             ButtonVariantClassName.default,
             ButtonVariantClassName.hover,
-            ButtonVariantClassName.focus,
+            ButtonVariantClassName.focus
           )]: !disabled,
           [classNames(ButtonVariantClassName.disabled, "cursor-not-allowed")]:
             disabled,
@@ -68,5 +68,5 @@ export const Button: FC<IButtonProps> = memo(
         />
       </button>
     );
-  },
+  }
 );

@@ -1,7 +1,7 @@
 import "@fontsource/inter";
 import classNames from "classnames";
 import { ReactElement } from "react";
-import { IHasClassName } from "../../src/@interfaces";
+import { IHasClassName } from "../../@interfaces";
 import "../../src/styles/styles.css";
 import "../../src/styles/tailwind.css";
 

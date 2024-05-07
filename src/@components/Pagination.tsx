@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, memo, useCallback, useEffect } from "react";
+import React, { FC, memo, useCallback, useEffect } from "react";
 import { Pagination as PaginationHeadless } from "react-headless-pagination";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
@@ -54,7 +54,7 @@ export const Pagination: FC<IPaginationProps> = memo(
       (page: number) => {
         setPage(page);
       },
-      [setPage],
+      [setPage]
     );
 
     if (isMobile) {
@@ -63,7 +63,7 @@ export const Pagination: FC<IPaginationProps> = memo(
           <FiArrowLeft
             className={classNames(
               "mr-3 text-gray-500 dark:text-white",
-              previouseButtonStartStyle(page),
+              previouseButtonStartStyle(page)
             )}
             size={BUTTON_ICON_SIZE}
             onClick={() => {
@@ -78,7 +78,7 @@ export const Pagination: FC<IPaginationProps> = memo(
           <FiArrowRight
             className={classNames(
               "mr-3 text-gray-500 dark:text-white",
-              nextButtonEndStyle(totalPages, page),
+              nextButtonEndStyle(totalPages, page)
             )}
             size={BUTTON_ICON_SIZE}
             onClick={() => {
@@ -106,7 +106,7 @@ export const Pagination: FC<IPaginationProps> = memo(
           <PaginationHeadless.PrevButton
             className={classNames(
               buttonBaseStyle,
-              previouseButtonStartStyle(page),
+              previouseButtonStartStyle(page)
             )}
           >
             <FiArrowLeft size={BUTTON_ICON_SIZE} className="mr-3" />
@@ -124,7 +124,7 @@ export const Pagination: FC<IPaginationProps> = memo(
           <PaginationHeadless.NextButton
             className={classNames(
               buttonBaseStyle,
-              nextButtonEndStyle(totalPages, page),
+              nextButtonEndStyle(totalPages, page)
             )}
           >
             Next
@@ -133,5 +133,5 @@ export const Pagination: FC<IPaginationProps> = memo(
         </PaginationHeadless>
       </>
     );
-  },
+  }
 );

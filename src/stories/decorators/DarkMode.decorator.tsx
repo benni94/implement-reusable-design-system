@@ -1,5 +1,5 @@
 import { StoryContext } from "@storybook/react";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
 export const globalDarkModeDecorator = (
   Story: () => ReactElement<unknown>,

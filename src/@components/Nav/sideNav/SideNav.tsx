@@ -1,4 +1,4 @@
-import { FC, memo, useState } from "react";
+import React, { FC, memo, useState } from "react";
 import { FiLogOut, FiSearch } from "react-icons/fi";
 import { INavItem } from "../../../@interfaces";
 import { images } from "../../../data";

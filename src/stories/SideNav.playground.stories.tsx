@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { SideNav } from "../@components/Nav";
 import { Figma, navItemsBottom, navItemsTop } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<typeof SideNav>;
 

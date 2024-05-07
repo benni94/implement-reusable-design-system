@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
-import { ExtendedStoryProps } from "../../.storybook/types";
+import React from "react";
 import { ITypographyProps, Typography } from "../@components";
 import { Figma } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
+import { ExtendedStoryProps } from "./types";
 type ExtendedTypographyProps = ExtendedStoryProps<
   typeof Typography,
   { storyVariant: "heading" | "text" }

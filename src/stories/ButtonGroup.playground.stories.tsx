@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { FiGrid, FiList } from "react-icons/fi";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { ButtonGroup, IButtonGroupProps } from "../@components";
 import { Figma, options1, options2 } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<IButtonGroupProps<string>>;
 

@@ -1,5 +1,5 @@
 import { Listbox } from "@headlessui/react";
-import { FC, Fragment, memo } from "react";
+import React, { FC, Fragment, memo } from "react";
 import { FiCheck, FiChevronDown } from "react-icons/fi";
 import { IOption } from "../../@interfaces";
 import { DynamicComponentWithWrapper } from "../../@utils";
@@ -66,5 +66,5 @@ export const Select: FC<ISelectProps> = memo(
         </Listbox>
       </div>
     );
-  },
+  }
 );

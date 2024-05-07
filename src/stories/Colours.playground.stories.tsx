@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { ColourBox } from "../@components/ColourBox";
 import { Figma, colours } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<typeof ColourBox>;
 

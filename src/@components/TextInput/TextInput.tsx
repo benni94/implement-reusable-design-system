@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC } from "react";
+import React, { FC } from "react";
 import { DynamicComponent } from "../../@utils";
 import { Typography } from "../Typography";
 import { styles } from "./TextInput.styles";

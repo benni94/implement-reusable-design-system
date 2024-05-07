@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { FiCalendar, FiDollarSign } from "react-icons/fi";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { Select } from "../@components/Select";
 import { IOption } from "../@interfaces";
 import { Figma, countries, dates, prices } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<typeof Select>;
 

@@ -7,9 +7,9 @@ import {
   FiHelpCircle,
   FiMail,
 } from "react-icons/fi";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { ITextInputProps, TextInput } from "../@components/TextInput";
 import { Figma } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<typeof TextInput>;
 

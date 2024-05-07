@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { FiX } from "react-icons/fi";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { MobileNavbar, SideNav } from "../@components/Nav";
 import { navItemsBottom, navItemsTop } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<typeof MobileNavbar>;
 

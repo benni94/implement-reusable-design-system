@@ -1,9 +1,9 @@
 import { action } from "@storybook/addon-actions";
 import { Meta, StoryObj } from "@storybook/react";
 import { FiArrowRight, FiStar } from "react-icons/fi";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { Button, IButtonProps } from "../@components";
 import { Figma } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
 
 type Story = StoryObj<typeof Button>;
 

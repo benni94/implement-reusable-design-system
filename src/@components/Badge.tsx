@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, ReactElement, memo } from "react";
+import React, { FC, memo, ReactElement } from "react";
 import { IHasClassName } from "../@interfaces";
 import { DynamicComponent } from "../@utils";
 

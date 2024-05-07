@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
-import { ExtendedStoryProps } from "../../.storybook/types";
 import { RentalCard } from "../@components";
 import { IRental } from "../@interfaces";
 import { Figma, rentals } from "../data";
+import { StoryLayoutDecorator } from "./decorators/StoryLayout.decorator";
+import { ExtendedStoryProps } from "./types";
 
 type ExtendedTypographyProps = ExtendedStoryProps<
   typeof RentalCard,

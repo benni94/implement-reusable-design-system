@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { FiArrowRight, FiStar } from "react-icons/fi";
-import { StoryLayoutDecorator } from "../../.storybook/decorators/StoryLayout.decorator";
 import { Badge, IBadgeProps } from "../@components";
 import { Figma, images } from "../data";
+import { StoryLayoutDecorator } from "./decorators";
 
 type Story = StoryObj<typeof Badge>;
 
