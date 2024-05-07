@@ -6,3 +6,4 @@ export * from "./images";
 export * from "./navItems";
 export * from "./options";
 export * from "./prices";
+export * from "./rentails";
