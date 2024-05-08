@@ -2,6 +2,10 @@
 
 https://github.com/thijssmudde/tailwind-storybook-starter
 
+## Storybook course
+
+https://github.com/thijssmudde/storybook-course
+
 #### Cheat sheet for tailwind:
 
 https://nerdcave.com/tailwind-cheat-sheet
